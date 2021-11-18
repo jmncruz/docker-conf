@@ -19,10 +19,10 @@ services:
     ports:
       - "5432:5432"
     volumes: 
-    - ./.docker/db:/var/lib/postgresql
+    - ./docker/db:/var/lib/postgresql
   
   nginx:
-    build: ./.docker/nginx
+    build: ./docker/nginx
     restart: always
     ports:
       - "8000:80"
