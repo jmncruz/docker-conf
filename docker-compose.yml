@@ -4,7 +4,7 @@ services:
     restart: always
     build: .
     volumes: 
-      - ./app/back-end:/var/www/
+      - ./app/backoffice:/var/www/
     depends_on: 
       - db
 
@@ -15,7 +15,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_DB: coroas
+      POSTGRES_DB: backoffice
     ports:
       - "5432:5432"
     volumes: 
@@ -27,7 +27,7 @@ services:
     ports:
       - "8000:80"
     volumes: 
-      - ./app/back-end:/var/www
+      - ./app/backoffice:/var/www
     depends_on: 
       - web
 

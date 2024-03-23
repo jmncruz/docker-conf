@@ -1,4 +1,4 @@
-FROM php:8.0.12-fpm-alpine
+FROM php:8.3-fpm-alpine
 
 RUN apk update --no-cache \
 && apk add \
